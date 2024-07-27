@@ -18,7 +18,7 @@ class Location {
     return true;
   }
 
-  void getCurrentLocation() async {
+  Future<void> getCurrentLocation() async {
     bool permission = await askForPermission();
     if (permission) {
           Position position  = await Geolocator.getCurrentPosition(
